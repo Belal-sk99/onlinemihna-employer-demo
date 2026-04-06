@@ -17,12 +17,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-
-const FIELDS = [
-  { name: "companyName", label: "Company Name", type: "text", placeholder: "Acme Inc." },
-  { name: "email", label: "Work Email", type: "email", placeholder: "you@company.com" },
-  { name: "jobTitle", label: "First Job Title to Hire", type: "text", placeholder: "Senior React Developer" },
-] as const;
+import { FIELDS } from "@/features/auth/constants/signup";
 
 export function SignupForm() {
   const router = useRouter();
@@ -44,20 +39,25 @@ export function SignupForm() {
         // localStorage unavailable — continue anyway
       }
       toast.success("Account created! Redirecting to login...");
-      router.push("/login");
     });
   }
 
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="text-center">
-        <CardTitle className="text-2xl font-bold">Start Your Free Trial</CardTitle>
+        <CardTitle className="text-2xl font-bold">
+          Start Your Free Trial
+        </CardTitle>
         <CardDescription>
           7 days of full access. No credit card required.
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+          className="space-y-4"
+        >
           {FIELDS.map(({ name, label, type, placeholder }) => (
             <fieldset key={name} className="space-y-1.5">
               <Label htmlFor={name}>{label}</Label>
@@ -70,7 +70,9 @@ export function SignupForm() {
                 {...register(name)}
               />
               {errors[name] && (
-                <p className="text-sm text-destructive">{errors[name]?.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors[name]?.message}
+                </p>
               )}
             </fieldset>
           ))}

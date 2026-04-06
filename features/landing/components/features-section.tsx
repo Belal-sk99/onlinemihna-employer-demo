@@ -4,7 +4,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { FEATURES, STEPS } from "@/features/landing/data/features";
+import { FEATURES, STEPS } from "@/features/landing/constants/features";
 
 export function FeaturesSection() {
   return (
