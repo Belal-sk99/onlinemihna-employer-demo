@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
 import { Loader2, ArrowRight } from "lucide-react";
@@ -20,7 +20,6 @@ import {
 import { FIELDS } from "@/features/auth/constants/signup";
 
 export function SignupForm() {
-  const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
   const {
@@ -35,10 +34,9 @@ export function SignupForm() {
     startTransition(() => {
       try {
         localStorage.setItem("employer-signup", JSON.stringify(data));
-      } catch {
-        // localStorage unavailable — continue anyway
-      }
-      toast.success("Account created! Redirecting to login...");
+      } catch {}
+      toast.success("Account created! Redirecting to Dashboard");
+      redirect("/dashboard");
     });
   }
 

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OnlineMihna — Employer Demo",
+  title: "OnlineMihna - Employer Demo",
   description:
     "Start your 7-day free trial. Connect with verified remote professionals and hire smarter.",
 };

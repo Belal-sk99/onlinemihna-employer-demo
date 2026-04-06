@@ -13,7 +13,7 @@ export const FEATURES = [
     icon: UserCheck,
     title: "Pre-Vetted Talent",
     description:
-      "Access qualified, skill-assessed professionals — not random applicants.",
+      "Access qualified, skill-assessed professionals - not random applicants.",
   },
   {
     icon: DollarSign,
@@ -31,7 +31,7 @@ export const FEATURES = [
     icon: Brain,
     title: "AI-Enhanced Matching",
     description:
-      "Smart technology surfaces the right candidates for your role — faster.",
+      "Smart technology surfaces the right candidates for your role - faster.",
   },
 ];
 
