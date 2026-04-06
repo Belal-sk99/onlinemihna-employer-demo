@@ -1,4 +1,4 @@
-# OnlineMihna — Employer Demo Flow
+# OnlineMihna - Employer Demo Flow
 
 A production-style employer onboarding demo built for [OnlineMihna](https://onlinemihna.com). Features a 7-day free trial landing page, signup form with validation, and mock employer dashboard.
 
@@ -65,4 +65,4 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Author
 
-**Belal Alkahlout** — [belalkahlout.com](https://belalkahlout.com) · [GitHub](https://github.com/Belal-sk99)
+**Belal Alkahlout** - [belalkahlout.com](https://belalkahlout.com) · [GitHub](https://github.com/Belal-sk99)

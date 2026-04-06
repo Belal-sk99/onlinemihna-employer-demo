@@ -1,5 +1,6 @@
 import { Shield, CreditCard, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const TRUST_INDICATORS = [
   { icon: CreditCard, label: "No credit card required" },
@@ -26,7 +27,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          Smarter Remote Hiring - {" "}
+          Smarter Remote Hiring -{" "}
           <span className="bg-linear-to-r from-brand-blue to-brand-green bg-clip-text">
             Try It Free for 7 Days
           </span>
@@ -44,10 +45,10 @@ export default function Hero() {
             size="lg"
             className="h-12 rounded-full bg-brand-green px-8 text-base font-semibold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-green-hover hover:shadow-lg active:translate-y-0"
           >
-            <a href="#signup">
+            <Link href="/signup">
               Start Free Trial
               <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button
             asChild
@@ -55,7 +56,7 @@ export default function Hero() {
             size="lg"
             className="h-12 rounded-full px-8 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
           >
-            <a href="#features">See How It Works</a>
+            <Link href="/features">See How It Works</Link>
           </Button>
         </div>
 
