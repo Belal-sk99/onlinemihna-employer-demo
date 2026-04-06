@@ -1,60 +1,53 @@
-import { Job, TrialInfo, DashboardStats } from "@/shared/types";
+import type { Job, DashboardStats } from "@/shared/types";
 
-export const mockTrialInfo: TrialInfo = {
-  daysRemaining: 5,
-  totalDays: 7,
-  startDate: "2026-04-04",
-  endDate: "2026-04-11",
-  plan: "free-trial",
+export const MOCK_DASHBOARD_STATS: DashboardStats = {
+  remainingPosts: 2,
+  totalPosts: 5,
+  trialDaysLeft: 5,
+  totalApplications: 27,
+  activeJobs: 2,
+  hiredCount: 1,
 };
 
-export const mockStats: DashboardStats = {
-  jobPostsUsed: 2,
-  jobPostsLimit: 5,
-  totalApplicants: 18,
-  newApplicantsToday: 3,
-  messagesUnread: 4,
-};
-
-export const mockJobs: Job[] = [
+export const MOCK_JOBS: Job[] = [
   {
     id: "job_01",
     title: "Senior React Developer",
     type: "full-time",
     status: "published",
-    applicants: 12,
-    hoursPerWeek: 40,
     salary: "$2,500 - $3,500/mo",
-    createdAt: "2026-04-04",
+    hoursPerWeek: 40,
+    applicationsCount: 12,
+    createdAt: "2026-04-04T10:00:00Z",
   },
   {
     id: "job_02",
     title: "Customer Support Specialist (Arabic/English)",
     type: "full-time",
     status: "published",
-    applicants: 6,
-    hoursPerWeek: 40,
     salary: "$1,200 - $1,800/mo",
-    createdAt: "2026-04-05",
+    hoursPerWeek: 40,
+    applicationsCount: 6,
+    createdAt: "2026-04-05T14:30:00Z",
   },
   {
     id: "job_03",
     title: "Social Media Manager",
     type: "part-time",
     status: "draft",
-    applicants: 0,
-    hoursPerWeek: 20,
     salary: "$800 - $1,200/mo",
-    createdAt: "2026-04-06",
+    hoursPerWeek: 20,
+    applicationsCount: 0,
+    createdAt: "2026-04-06T09:15:00Z",
   },
   {
     id: "job_04",
     title: "Bookkeeper & Financial Assistant",
     type: "part-time",
     status: "closed",
-    applicants: 9,
-    hoursPerWeek: 25,
     salary: "$1,000 - $1,500/mo",
-    createdAt: "2026-04-02",
+    hoursPerWeek: 25,
+    applicationsCount: 9,
+    createdAt: "2026-04-02T08:45:00Z",
   },
 ];

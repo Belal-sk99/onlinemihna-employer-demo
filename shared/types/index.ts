@@ -1,34 +1,28 @@
-export type JobStatus = "published" | "draft" | "closed";
 export type JobType = "full-time" | "part-time" | "gig";
+
+export type JobStatus = "published" | "draft" | "closed";
 
 export interface Job {
   id: string;
   title: string;
   type: JobType;
   status: JobStatus;
-  applicants: number;
-  hoursPerWeek: number;
   salary: string;
+  hoursPerWeek: number;
+  applicationsCount: number;
   createdAt: string;
 }
 
-export interface TrialInfo {
-  daysRemaining: number;
-  totalDays: number;
-  startDate: string;
-  endDate: string;
-  plan: "free-trial";
-}
-
 export interface DashboardStats {
-  jobPostsUsed: number;
-  jobPostsLimit: number;
-  totalApplicants: number;
-  newApplicantsToday: number;
-  messagesUnread: number;
+  remainingPosts: number;
+  totalPosts: number;
+  trialDaysLeft: number;
+  totalApplications: number;
+  activeJobs: number;
+  hiredCount: number;
 }
 
-export interface SignupFormData {
+export interface TrialSignupData {
   companyName: string;
   email: string;
   jobTitle: string;
