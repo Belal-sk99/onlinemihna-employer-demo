@@ -1,8 +1,9 @@
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      Landing page
+      <Link href="/landing">Go to Landing page</Link>
     </div>
   );
 }
