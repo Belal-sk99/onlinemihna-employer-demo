@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/shared/components/providers";
+import { Navbar } from "@/shared/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OnlineMihna - Employer Demo",
+  title: "OnlineMihna — Employer Demo",
   description:
     "Start your 7-day free trial. Connect with verified remote professionals and hire smarter.",
 };
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <Providers>
+          <Navbar />
           {children}
           <Toaster richColors position="top-right" />
         </Providers>
