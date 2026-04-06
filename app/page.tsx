@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { Hero, FeaturesSection } from "@/features/landing";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div>
-      <Link href="/landing">Go to Landing page</Link>
-    </div>
+    <main className="flex-1">
+      <Hero />
+      <FeaturesSection />
+    </main>
   );
 }
