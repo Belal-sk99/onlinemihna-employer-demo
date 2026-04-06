@@ -56,7 +56,7 @@ export function Hero() {
             size="lg"
             className="h-12 rounded-full px-8 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
           >
-            <Link href="/features">See How It Works</Link>
+            <Link href="#features">See How It Works</Link>
           </Button>
         </div>
 

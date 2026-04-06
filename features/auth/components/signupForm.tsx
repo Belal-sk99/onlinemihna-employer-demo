@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition } from "react";
-import { redirect, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
 import { Loader2, ArrowRight } from "lucide-react";

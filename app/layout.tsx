@@ -16,9 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OnlineMihna - Employer Demo",
+  title: {
+    default: "OnlineMihna - Employer Demo",
+    template: "%s | OnlineMihna",
+  },
   description:
     "Start your 7-day free trial. Connect with verified remote professionals and hire smarter.",
+  openGraph: {
+    type: "website",
+    siteName: "OnlineMihna",
+    title: "OnlineMihna - Smarter Remote Hiring",
+    description:
+      "Connect with verified bilingual professionals. Post jobs, review candidates, and hire directly - no agency fees.",
+  },
+  twitter: {
+    card: "summary",
+    title: "OnlineMihna - Smarter Remote Hiring",
+    description:
+      "Connect with verified bilingual professionals. Post jobs, review candidates, and hire directly - no agency fees.",
+  },
 };
 
 export default function RootLayout({

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Plus, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DashboardHeader, StatsCards, JobList } from "@/features/dashboard";
+
+export const metadata: Metadata = {
+  title: "Employer Dashboard",
+  description:
+    "Manage your job postings, review applications, and track your hiring pipeline.",
+};
 
 export default function DashboardPage() {
   return (

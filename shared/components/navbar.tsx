@@ -25,7 +25,7 @@ export function Navbar() {
           <ThemeToggle />
           <Button
             asChild
-            className="h-9 rounded-full bg-brand-green px-5 text-sm font-semibold text-white transition-all duration-200 hover:bg-brand-green-hover"
+            className="h-9 rounded-full bg-brand-green px-5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-green-hover hover:shadow-md active:translate-y-0"
           >
             <Link href="/signup">Start Free Trial</Link>
           </Button>
